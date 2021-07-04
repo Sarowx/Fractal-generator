@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fractal generator</title>
+  <!-- HTML -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <canvas id="myCanvas" width="370" height="350" style="border:1px solid #000000;">
+  </canvas>
+  <label for="intervalInput">Interval</label>
+  <input type="number" name="intervalInput" id="intervalInput" value="10" />
+  <button type="button" id="clearButton">Clear</button>
+  <button id="startButton" type="button">Start</button>
+  <button id="stopButton" type="button">Stop</button>
+  <div class="paternEditor">
+    <p class="">Start values</p>
+    <label for="startX">X</label>
+    <input type="number" name="startX" id="startX" value="180" />
+    <br />
+    <label for="startY">Y</label>
+    <input type="number" name="startY" id="startY" value="330" />
+    <br />
+    <label for="startAngle">Angle</label>
+    <input type="number" name="startAngle" id="startAngle" value="-90" placeholder="In degree" />
+    <br />
+    <label for="length">Length</label>
+    <input type="number" name="length" id="startLength" value="60" />
+    <br />
+    <label for="depth">Depth</label>
+    <input type="number" name="depth" id="depth" value="9" />
+    <hr />
+    
+    <div class="addingItems">
+      <p>Add items</p>
+      <label for="itemAngle">Angle</label>
+      <input type="number" name="itemAngle" id="itemAngle" value="30" />
+      <button type="button" id="clearItems" onclick="clearItems()">Clear items</button>
+      <br />
+      <label for="itemScale">Scale</label>
+      <input type="number" name="itemScale" id="itemScale" value="0.7" />
+      
+      <button id="addItemButton" type="button">Add item</button>
+      
+      <div class="addedItems" id="addedItemsDiv">
+        
+      </div>
+    </div>
+  </div>
+  <!-- Project -->
+  <script src="shapes.js" type="text/javascript" charset="utf-8"></script>
+  <script src="fractal-generator.js" type="text/javascript" charset="utf-8"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
